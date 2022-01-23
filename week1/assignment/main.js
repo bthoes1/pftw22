@@ -46,7 +46,7 @@ function draw() {
     // right eyebrow
     line(800, 100, 550, 350);
     // eyes
-    fill(0, 0, 255);
+    fill(eyeColor);
     strokeWeight(10);
     // left eye
     ellipse(400, 325, 25);
