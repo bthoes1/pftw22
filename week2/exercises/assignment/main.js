@@ -18,16 +18,6 @@ console.log(questions[randomIdx].question);
 const questionAttempt = window.prompt(questions[randomIdx].question);
 
 
-const answerResult = 'You guessed \"' + questionAttempt + '\". The correct response is \"' + questions[randomIdx].answer + '\". This question ended the ' + questions[randomIdx].numberOfGames + '-day winning streak of ' + questions[randomIdx].player + '.';
+const answerResult = 'You guessed \"' + questionAttempt + '\". The correct response is \"' + questions[randomIdx].answer + '\". This clue ended the ' + questions[randomIdx].numberOfGames + '-day winning streak of ' + questions[randomIdx].player + '.';
 console.log(answerResult);
 window.alert(answerResult);
-
-
-
-
-
-// Most of this firm's 70,000 seasonal white-collor workers work only 4 months per year. What is H & R Block?
-
-// The only nation in the world whos name in English ends in H, it's also one of the 10 most populous? What is Bangladesh?
-
-// Nazi Germany annexed this nation and divided it into regions of the Alps and the Danube; the Allies later divided it into 4 sectors. What is Austria?
