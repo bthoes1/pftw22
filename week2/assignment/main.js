@@ -1,5 +1,5 @@
 
-let instructions = 'Are you smarter than a Jeopardy champion? \n \n Ken Jennings, Amy Schneider, and Matt Amodio are the top-3 ranked Jeopardy players in terms of most consecutive wins. Can you solve the clues that ended their historic streaks? Remember to answer in the form of a question!';
+let instructions = 'Are you smarter than a Jeopardy champion? \n \nKen Jennings, Amy Schneider, and Matt Amodio are the top-3 ranked Jeopardy players in terms of most consecutive wins. Can you solve the clues that ended their historic streaks? Remember to answer in the form of a question!';
 
 console.log(instructions);
 
