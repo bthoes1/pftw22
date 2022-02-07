@@ -2,12 +2,12 @@
 const warning = window.alert('Please be aware that the following contains rapidly changing colors in a strobe effect.');
 console.log(warning);
 
-// starting value directions
+// starting value declarations
 let rotateBy = 50;
 let originX = 150;
 let originY = 150;
+let lineWeight = 2; // named 'lineWeight' to differentiate from strokeWeight
 let r, g, b;
-let lineWeight = 2;
 
 function setup() {
     createCanvas(600, 600);
@@ -32,12 +32,14 @@ function draw() {
     translate(300, 300);
     rotate(rotateBy);
     makeArm(rotateBy, originX, lineWeight);
-    rotateBy += 20; // adds 20 to rotation value for each new ellipse
-    originX -= 10; // subtracts 10 from originX value of each new ellipse
-    lineWeight -= .001; // descreases stroke weight of each new ellipse
-    r = random(255);
-    g = random(255);
-    b = random(255);
+    
+    // speciifc changes to each arm
+    rotateBy += 20; // adds 20 degrees
+    originX -= 10; // subtracts 10px
+    lineWeight -= .001; // subtracts .001 px
+    r = random(255); // selects random r value
+    g = random(255); // selects random g value
+    b = random(255); // selects random b value
 }
 
 function mousePressed() {
