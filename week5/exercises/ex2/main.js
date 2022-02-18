@@ -1,17 +1,19 @@
-let bubble;
+let bubble = [];
+
 
 function setup() {
     createCanvas(500, 500);
-    bubble = new Bubble();
+    for(let i = 0; i <= 100; i++) {
+        bubble[i] = new Bubble();
+    }
 }
 
 function draw() {
     background(0);
-    for(let i = 0; i <= 100; i = i + 20) {
-        bubble.show();
-        bubble.move();
+    for(let i = 0; i <= 100; i++) {
+        bubble[i].show();
+        bubble[i].move();
     }
-    console.log('instance');
 }
 
 class Bubble {
