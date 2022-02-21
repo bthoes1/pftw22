@@ -29,7 +29,7 @@ function setup () {
     createCanvas(1100, 750);
     let selectedFaces = [];
     for (let z = 0; z < 6; z++) {
-        const randomIdx = floor(random(cardfaceArray.lenth));
+        const randomIdx = floor(random(cardfaceArray.length));
         const face = cardfaceArray[randomIdx];
         selectedFaces.push(face);
         selectedFaces.push(face);
@@ -49,7 +49,7 @@ function setup () {
 }
 
 function draw () {
-    background(240);
+    background(0);
     if (gameState.numMatched === gameState.totalPairs) {
         fill('blue');
         textSize(66);
