@@ -26,7 +26,7 @@ function preload() {
 }
 
 function setup () {
-    createCanvas(1100, 750);
+    createCanvas(1100, 700);
     let selectedFaces = [];
     for (let z = 0; z < 6; z++) {
         const randomIdx = floor(random(cardfaceArray.length));
@@ -39,8 +39,8 @@ function setup () {
     selectedFaces = shuffleArray(selectedFaces);
     for (let j = 0; j < 3; j++) {
         for (let i = 0; i < 4; i++) {
-            const faceImage = selectedFaces.pop();
-            cards.push(new Card(startingX, startingY, faceImage));
+            const cardFaceImg = selectedFaces.pop();
+            cards.push(new Card(startingX, startingY, cardFaceImg));
             startingX += 225;
         }
         startingY += 225;
@@ -49,11 +49,11 @@ function setup () {
 }
 
 function draw () {
-    background(0);
+    background(240);
     if (gameState.numMatched === gameState.totalPairs) {
         fill('blue');
-        textSize(66);
-        text('you win!!!!', 950, 450);
+        textSize(18);
+        text(' Hey, hey, \n you saved the \n world today!', 950, 500);
         noLoop();
     }
     for (let k = 0; k < cards.length; k++) {
@@ -85,7 +85,7 @@ function mousePressed() {
     }
     if (gameState.flippedCards.length === 2) {
         gameState.attempts++;
-        if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].faceImage) {
+        if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardFaceImg) {
             // cards  match
             // mark cards as flipped
             gameState.flippedCards[0].isMatch = true;
