@@ -1,0 +1,36 @@
+@import url("https://use.typekit.net/gnf2dry.css");
+
+body {
+    color: blue;
+    background-color: #EDECD9;
+    width: 50%;
+    margin: auto;
+    font-family: minion-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+h1 {
+    font-size: 96px;
+    font-style: italic;
+    padding: 25vh 0;
+}
+
+li {
+    font-size: 48px;
+    padding: 100px 0px 125px;
+    text-align: center;
+    list-style-type: none;
+    border-top: 2px solid blue;
+}
+
+h2 {
+    font-size: 36px;
+    font-style: italic;
+    padding-bottom: 25px;
+}
+
+.disclaimer {
+    font-style: italic;
+}

@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+<body>
+    <div id="myApp">
+        <h1>A Few Facts About Llamas</h1>
+            <ul>
+                <li>
+                    <h2>Fact One</h2>
+                    <div>{{factOne}}</div>
+                </li>
+                <li>
+                    <h2>Fact Two</h2>
+                    <div>{{factTwo}}</div>
+                </li>
+                <li>
+                    <h2>Fact Three</h2>
+                    <div>{{factThree}}</div>
+                </li>
+                <li>
+                    <h2>Fact Four</h2>
+                    <div>{{factFour}}</div>
+                </li>
+                <li>
+                    <h2>Fact Five</h2>
+                    <div>{{factFive}}</div>
+                </li>
+                <li>
+                    <h2>Fact Six</h2>
+                    <div>{{factSix}}</div>
+                </li>
+                <li>
+                    <h2>Fact Seven</h2>
+                    <div>{{factSeven}}</div>
+                </li>
+                <li>
+                    <h2>Fact Eight</h2>
+                    <div>{{factEight}}</div>
+                </li>
+                <li>
+                    <h2>Fact Nine</h2>
+                    <div>{{factNine}}</div>
+                </li>
+                <li>
+                    <h2>Fact Ten</h2>
+                    <div v-if="factTen===false">{{factTen}}</div>
+                    <p v-else="message===true">{{message}}</p>
+                </li>
+                <li>
+                    <h2>Fact Eleven</h2>
+                    <div>{{factEleven}}</div>
+                </li>
+            </ul>
+        <p class="disclaimer">All facts are from <a href="https://onekindplanet.org/animal/llama/">One Kind Planet</a> and <a href="https://www.treehugger.com/things-you-didnt-know-about-llamas-4863830">Treehugger</a>.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="main.js"></script>    
+</body>
+
+</html>
