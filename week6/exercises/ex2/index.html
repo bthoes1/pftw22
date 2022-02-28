@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    
+  </head>
+
+  <body>
+    <div id="myApp">
+      <h1>{{message}}</h1>
+      <p>My dog {{dogFirstName}} needs a middle name.</p>
+      <p>I think I'll choose...</p>
+      <input v-model="dogMiddleName" type="text">
+      <p v-if="dogMiddleName==='Reynolds'">{{dogFirstName}} {{dogMiddleName}} {{dogLastName}}</p>
+      <p v-else>Hmmm... {{dogFirstName}} {{dogMiddleName}} {{dogLastName}}
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="lib/script.js"></script>
+
+  </body>
+</html>
