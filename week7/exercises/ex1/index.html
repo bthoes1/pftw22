@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llama and Alpaca Facts</title>
+    <link rel="stylesheet" href="main.css">
+    
+<body>
+    <div id="app" v-cloak>
+        <h1 v-bind:style="headingStyle">Let's talk about llamas vs. alpacas</h1> 
+            <p v-bind:class="{globalStyle: globalStyle==='apply'}">
+                While <a v-bind:title="llamaWikiTitle" v-bind:href="llamaWiki">llamas</a> and <a v-bind:title="alpacaWikiTitle" v-bind:href="alpacaWiki">alpacas</a> may appear similar, they are actually quite different. Here are some of the things they have in common as well as things that make each unique.
+            </p>
+
+            <ul v-bind:class="{globalStyle: globalStyle==='apply'}">
+                <li>While they may look similar, llamas usually weigh 300-450 lbs. while alpacas weigh 100-200 lbs.</li>
+                <li>Llamas are also taller than alpacas, standing 5.5-6.5 feet tall, while alpacas stand at 4-5 feet tall in general.</li>
+                <li>Both llamas and alpacas spit far less than their reputation suggests. Often this is to diffuse conflict that would otherwise lead to fighting.</li>
+                <li>Both product fiber that are commonly used in textiles.</li>
+            </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="main.js"></script>    
+</body>
+
+</html>
