@@ -1,0 +1,86 @@
+@import url("https://use.typekit.net/gnf2dry.css");
+
+body {
+    background-color: white;
+    color: black;
+    width: 80%;
+    margin: 0 auto;
+    font-family: attribute-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    width: 300px;
+}
+
+h1 {
+    padding: 50px 0;
+}
+
+table, thead, th, tbody, tr, td {
+    border: 0 none;
+    margin: 0;
+}
+
+thead {
+    background-color: white;
+}
+
+th {
+    font-size: 12px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 20px;
+}
+
+.needs-more-space {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.even {
+    background-image: linear-gradient(to bottom right, #D3D3D3, #F5FCFF);
+}
+
+.odd {
+    background-image: linear-gradient(to bottom right, #C8DCF0, #E6F0FF);
+}
+
+.streaming {
+    color: blue;
+}
+
+.key {
+    color: blue;
+    font-style: italic;
+    padding: 20px 0 40px;
+}
+
+.new-show-form {
+    margin: 20px 0;
+}
+
+.new-show-form fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.new-show-form div {
+    margin: 10px 0;
+    width: 120px;
+}
+
+.new-show-form label {
+    max-width: 120px;
+}
+
+.new-show-form input {
+    max-width: 120px;
+    display: block;
+}

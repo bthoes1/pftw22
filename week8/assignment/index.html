@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell me about television</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <h1>My most recent TV watches</h1>
+    <div id="myCollectionApp">
+        <table>
+            <thead>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Platform</th>
+                <th>Seasons</th>
+                <th>Premise</th>
+                <th class="cell actions">Actions</th>
+            </thead>
+
+            <tbody>
+                <tr 
+                    v-for="(show, idx) in shows"
+                    v-bind:class="{odd: (idx + 1) % 2 !== 0, even: (idx + 1) % 2 === 0, streaming: show.platform === 'Netflix'}">
+                        <td><img v-bind:title="show.name"
+                            v-bind:src="show.image" v-bind:alt="show.name"></td>
+                        <td>{{show.name}}</td>
+                        <td>{{show.platform}}</td>
+                        <td class="needs-more-space">{{show.seasons}}</td>
+                        <td>{{show.premise}}</td>
+                        <td class="cell actions">
+                            <button type="button" v-on:click="deleteItem(show)">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <form v-on:submit.prevent="submitHandler" class="new-show-form">
+            <fieldset>
+                <legend>Add a show to the collection</legend>
+                <div>
+                    <label for="image">Image URL</label>
+                    <input id="image" type="text" v-model="newConsoleObj.image">
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" v-model="newConsoleObj.name">
+                </div>
+                <div>
+                    <label for="platform">Platform</label>
+                    <input id="platform" type="text" v-model="newConsoleObj.platform">
+                </div>
+                <div>
+                    <label for="seasons">Seasons</label>
+                    <input id="seasons" type="number" v-model="newConsoleObj.seasons">
+                </div>
+                <div>
+                    <label for="premise">Premise</label>
+                    <input id="premise" type="text" v-model="newConsoleObj.premise">
+                </div>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="key">
+        <p>Blue type indicates a show exclusively available on streaming.</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
