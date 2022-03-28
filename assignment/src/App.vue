@@ -38,7 +38,6 @@
                 seasons: '1',
                 premise: 'Based on the beloved comic series, this heartfelt post-apocalyptic epic centers on questions of identity and belonging. A hybrid deer-human child ventures out from his isolated home, discovers unlikely friends, and stands up to genocidal forces, all against the backdrop of a virus-devastated country.',
                 id:5
-
         }
     ];
     const newShowObj = {
@@ -63,7 +62,7 @@
         state.newShowObj.platform = "";
         state.newShowObj.seasons = null;
         state.newShowObj.permise = "";
-     }
+     };
      function handleDelete(itemToDelete) {
          console.log(itemToDelete.id, itemToDelete.name);
          state.shows = state.shows.filter((itemToCheck) => {
@@ -92,11 +91,12 @@
                     v-bind:key="idx" 
                     v-bind:item="show"
                     v-on:delete-item="handleDelete"
+                    v-bind:class="{odd: (idx + 1) % 2 !== 0, even: (idx + 1) % 2 === 0, streaming: show.platform === 'Netflix'}"
                 />
             </tbody>
               
           </table>
-          <form v-on:submit.prevent="submitHandler" class="new-show-form">
+          <form v-on:submit.prevent="addNewShow" class="new-show-form">
               <fieldset>
                   <legend>Add a show to the collection</legend>
                   <div>
@@ -140,6 +140,68 @@
     }
 
     img {
-    width: 300px;
-}
+        width: 300px;
+    }
+
+    h1 {
+        padding: 50px 0;
+    }
+
+    table, thead, th, tbody, tr, td {
+        border: 0 none;
+        margin: 0;
+    }
+
+    thead {
+        background-color: white;
+    }
+
+    th {
+        font-size: 12px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    td {
+        padding: 20px;
+    }
+
+    .needs-more-space {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .new-show-form {
+        margin: 20px 0;
+    }
+
+    .new-show-form fieldset {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .new-show-form div {
+        margin: 10px 0;
+        width: 120px;
+    }
+
+    .new-show-form label {
+        max-width: 120px;
+    }
+
+    .new-show-form input {
+        max-width: 120px;
+        display: block;
+    }
+
+    .even {
+        background-image: linear-gradient(to bottom right, #D3D3D3, #F5FCFF);
+    }
+
+    .odd {
+        background-image: linear-gradient(to bottom right, #C8DCF0, #E6F0FF);
+    }
+    
 </style>
