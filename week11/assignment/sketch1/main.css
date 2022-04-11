@@ -5,4 +5,18 @@ body {
     font-family: attribute-text;
     color: white;
     margin: 20 50;
+} 
+
+ul {
+    float: right;
+    list-style-type: none;
+}
+
+ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.selected {
+    color: #E0707C;
 }
