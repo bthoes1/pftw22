@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    max-width: 420px;;
+    text-align: center;
+}
+
+h1 {
+    font-style: italic;
+}
