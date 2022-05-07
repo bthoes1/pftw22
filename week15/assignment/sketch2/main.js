@@ -34,7 +34,7 @@ function Particle() {
   
   this.display = function() {
     noFill();
-    stroke('pink');
+    stroke(255,112,124);
     ellipse(this.position.x, this.position.y,1,1);
   };
 }
