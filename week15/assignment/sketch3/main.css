@@ -4,12 +4,23 @@ body {
     background-color: black;
     font-family: attribute-text;
     color: white;
-    margin: 20 50;
+    margin: 0 auto;
+} 
+
+h1, p {
+    margin: 20px;
+}
+
+p {
+    width: 75%;
 }
 
 ul {
-    float: right;
+    position: fixed;
+    top: 20px;
+    right: 20px;
     list-style-type: none;
+    margin-left: 20px;
 }
 
 ul a {

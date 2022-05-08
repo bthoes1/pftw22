@@ -1,8 +1,7 @@
 var swarm = [];
-let slider;
 
 function setup() {
-    createCanvas(800,800);
+    createCanvas(windowWidth, 800);
     for (var i = 0; i <2000; i++) {
         swarm[i] = new Particle();
     }
@@ -35,6 +34,6 @@ function Particle() {
   this.display = function() {
     noFill();
     stroke(255,112,124);
-    ellipse(this.position.x, this.position.y,1,1);
+    ellipse(this.position.x, this.position.y,5,5);
   };
 }

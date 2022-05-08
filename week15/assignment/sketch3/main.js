@@ -1,14 +1,16 @@
 function setup() {
-    createCanvas(600, 600);
+    createCanvas(windowWidth, 800);
     background(50);
 }
 
 function draw() {
-    for (var i = 20; i <= 580; i += 20) {
-        for (var j = 20; j <= 580; j += 20) {
+    for (var i = 100; i <= 100; i++) {
+        for (var j = 100; j <= 100; j ++) {
             stroke('#E0707C');
             noFill();
-            ellipse (i, j, 80, 80);
+            strokeWeight(.5);
+            line(i, j, mouseX, mouseY);
         }
     }
 }
+
