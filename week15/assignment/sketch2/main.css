@@ -13,6 +13,7 @@ h1, p {
 
 p {
     width: 75%;
+    font-size: 14px;
 }
 
 ul {
@@ -21,6 +22,7 @@ ul {
     right: 20px;
     list-style-type: none;
     margin-left: 20px;
+    text-align: right;
 }
 
 ul a {

@@ -7,13 +7,26 @@ body {
     margin: 0 auto;
 } 
 
+.top {
+    position: absolute;
+    top: 20;
+    left:20;
+}
+
+.bottom {
+
+    position: absolute;
+    bottom: 20;
+    left: 20;
+}
+
 h1, p {
-    margin: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 p {
-    width: 75%;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 ul {
@@ -22,7 +35,6 @@ ul {
     right: 20px;
     list-style-type: none;
     margin-left: 20px;
-    text-align: right;
 }
 
 ul a {
